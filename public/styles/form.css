@@ -1,0 +1,29 @@
+main {
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+main form label {
+  font-weight: 600;
+  color: #868686;
+}
+form textarea {
+  font-size: 24px;
+  border: none;
+  border-bottom: solid 2px;
+  /* border-bottom: solid 2px; */
+  width: 100%;
+  background-color: transparent;
+}
+
+.button-output {
+  font-family: Bungee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main button {
+  background-color: #4056a1;
+  color: #ffffff;
+}
