@@ -1,13 +1,13 @@
 nav {
   position: sticky;
-  top: 0px;
+  top: 0;
   width: 100%;
   display: flex;
   color: #ffff;
   flex-flow: row;
   justify-content: space-between;
   height: 120px;
-  background-color: #4056a1;
+  background-color: #000000;
   padding: 1.5em;
   z-index: 1;
 }
@@ -25,5 +25,5 @@ nav {
 }
 
 .nav-right-side i {
-  color: red;
+  color: #fa7319;
 }
