@@ -30,3 +30,7 @@ main button {
   background-color: #fa7319;
   color: #ffffff;
 }
+
+.negetive-counter {
+  color: red;
+}

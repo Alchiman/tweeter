@@ -1,0 +1,40 @@
+article.tweet {
+  padding: 20px;
+  margin-top: 40px;
+  border: solid black;
+}
+
+article.tweet:hover {
+  box-shadow: 10px 10px 20px #b85252;
+}
+
+article header {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-name {
+  padding-left: 10px;
+  flex-grow: 2;
+}
+
+article footer {
+  padding-top: 10px;
+  border-top: solid 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+article i {
+  padding: 0 10px;
+}
+
+article i:hover {
+  color: orange;
+}
+
+article img {
+  width: 5rem;
+}

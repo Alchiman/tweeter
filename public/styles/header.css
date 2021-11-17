@@ -1,4 +1,4 @@
-header {
+body > header {
   color: #ffffff;
   display: flex;
   position: static;

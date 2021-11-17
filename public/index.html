@@ -29,12 +29,17 @@
     <link rel="stylesheet" href="/styles/nav.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/form.css" />
+    <link rel="stylesheet" href="/styles/tweet.css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
+  <script
+    type="text/javascript"
+    src="/scripts/composer-char-counter.js"
+  ></script>
 
   <body>
     <!-- Top nav bar (fixed) -->
@@ -47,12 +52,9 @@
       </div>
     </nav>
     <header>
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div>
-        <h2>Your Name</h2>
-      </div>
+      <img src="/images/profile-hex.png" />
+
+      <h1>Your Name</h1>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -69,6 +71,38 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section>
+        <article class="tweet">
+          <header>
+            <img src="/images/profile-hex.png" alt="avatar" />
+            <span class="tweet-name">Your name</span>
+            <span>@username</span>
+          </header>
+          <p>Body of the tweet goes hear! lalalalalala blah blah blah blah</p>
+          <footer>
+            <span>date of the tweet </span>
+            <span
+              ><i class="fas fa-heart"></i><i class="fas fa-flag"></i
+              ><i class="fas fa-retweet"></i
+            ></span>
+          </footer>
+        </article>
+        <article class="tweet">
+          <header>
+            <img src="/images/profile-hex.png" alt="avatar" />
+            <span class="tweet-name">Your name</span>
+            <span>@username</span>
+          </header>
+          <p>Body of the tweet goes hear! lalalalalala blah blah blah blah</p>
+          <footer>
+            <span>date of the tweet </span>
+            <span
+              ><i class="fas fa-heart"></i><i class="fas fa-flag"></i
+              ><i class="fas fa-retweet"></i
+            ></span>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
