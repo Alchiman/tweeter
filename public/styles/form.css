@@ -1,7 +1,11 @@
 main {
-  padding-top: 40px;
+  padding: 40px 0px;
   margin: 0 auto;
   width: 90%;
+}
+
+.new-tweet {
+  margin-bottom: 40px;
 }
 
 main form label {
