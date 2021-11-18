@@ -1,4 +1,4 @@
-body > header {
+section > header {
   color: #ffffff;
   display: flex;
   position: static;
@@ -11,4 +11,18 @@ body > header {
   background-color: #b85252;
   background-image: url("https://www.transparenttextures.com/patterns/xv.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+@media only screen and (min-width: 1024px) {
+  body > section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  section > header {
+    align-self: flex-start;
+    width: 40%;
+    margin: 120px 7%;
+  }
 }

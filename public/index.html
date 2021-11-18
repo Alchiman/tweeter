@@ -34,11 +34,11 @@
     ></script>
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/form.css" />
     <link rel="stylesheet" href="/styles/tweet.css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -60,35 +60,38 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header>
-      <img src="/images/profile-hex.png" />
+    <section>
+      <header>
+        <img src="/images/profile-hex.png" />
 
-      <h1>Your Name</h1>
-    </header>
+        <h1>Your Name</h1>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <p class="error-message">this is a message</p>
-        <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="start typing here ..."
-          ></textarea>
-          <div class="button-output">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <p class="error-message">this is a message</p>
+          <form action="/tweets/" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="start typing here ..."
+            ></textarea>
+            <div class="button-output">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+          <section id="posted-tweets">
+            <!-- tweet example 2: -->
+          </section>
+        </section>
 
-      <!-- posted tweets here! -->
-
-      <section id="posted-tweets">
-        <!-- tweet example 2: -->
-      </section>
-    </main>
+        <!-- posted tweets here! -->
+      </main>
+    </section>
   </body>
 </html>

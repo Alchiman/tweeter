@@ -48,3 +48,9 @@ main button {
 .negetive-counter {
   color: red;
 }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 2%;
+  }
+}
