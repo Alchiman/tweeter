@@ -5,31 +5,6 @@
  */
 
 $(document).ready(function() {
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text:
-          "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1461113959088,
-    },
-  ];
   const createTweetElement = function(tweet) {
     let $tweet = `<article class="tweet">
           <header>
@@ -49,6 +24,7 @@ $(document).ready(function() {
         </article>`;
     return $tweet;
   };
+
   // this function continusly renders tweets taken from a database
   const renderTweet = function(tweets) {
     for (const tweet of tweets) {
@@ -58,27 +34,47 @@ $(document).ready(function() {
       $("#posted-tweets").prepend(readyTweet);
     }
   };
+  // this function loads tweets
+  const loadTweets = function() {
+    // here get the tweets
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      success: function(tweets) {
+        renderTweet(tweets);
+      },
+      error: function(error) {},
+    });
+  };
+  loadTweets();
 
   // here the rendertweet function is finally called
-  renderTweet(data);
 
   $("form").on("submit", function(event) {
     event.preventDefault();
+
+    //get data from the form and prepare data for Ajax calling
     const $Data = $(this).serialize();
+    const $TextArea = $(this).find("textarea");
+    const $Counter = $(".counter");
 
     // $.post("/tweets/", $Data);
 
+    // here post tweet to the server
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: $Data,
-      success: function(results) {
-        console.log("data sent");
+      success: function() {
+        loadTweets();
       },
       error: function(error) {
         console.log("there was an error");
       },
     });
+
+    $TextArea.val("");
+    $Counter.text("140");
   });
   // =================================Ajax functions ==================
 
