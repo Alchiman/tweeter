@@ -64,12 +64,25 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
-    console.log($(this).serialize());
-  });
-});
-// =================================Ajax functions ==================
+    const $Data = $(this).serialize();
 
-// $("form").submit(function(event) {
-//   console.log("submit prevented");
-//   event.preventDefault();
-// });
+    // $.post("/tweets/", $Data);
+
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $Data,
+      success: function(results) {
+        console.log("data sent");
+      },
+      error: function(error) {
+        console.log("there was an error");
+      },
+    });
+  });
+  // =================================Ajax functions ==================
+
+  // $("form").submit(function(event) {
+  //   console.log("submit prevented");
+  //   event.preventDefault();
+});
