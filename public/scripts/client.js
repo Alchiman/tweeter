@@ -5,14 +5,19 @@
  */
 
 $(document).ready(function() {
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   const createTweetElement = function(tweet) {
     let $tweet = `<article class="tweet">
           <header>
             <img src="${tweet.user.avatars}" alt="avatar">
             <span class="tweet-name">${tweet.user.name}</span>
-            <span>${tweet.user.handle}</span>
+            <span class="handle">${tweet.user.handle}</span>
           </header>
-          <p>${tweet.content.text}</p>
+          <p>${escape(tweet.content.text)}</p>
           <footer>
             <span>${timeago.format(tweet.created_at)} </span>
             <span>
@@ -27,6 +32,7 @@ $(document).ready(function() {
 
   // this function continusly renders tweets taken from a database
   const renderTweet = function(tweets) {
+    $("#posted-tweets").empty();
     for (const tweet of tweets) {
       // here tweet taken from the array has turned into an article:
       const readyTweet = createTweetElement(tweet);
@@ -51,6 +57,7 @@ $(document).ready(function() {
   // here the rendertweet function is finally called
 
   $("form").on("submit", function(event) {
+    const maxLength = 140;
     event.preventDefault();
 
     //get data from the form and prepare data for Ajax calling
@@ -61,20 +68,28 @@ $(document).ready(function() {
     // $.post("/tweets/", $Data);
 
     // here post tweet to the server
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: $Data,
-      success: function() {
-        loadTweets();
-      },
-      error: function(error) {
-        console.log("there was an error");
-      },
-    });
+    if (Number($Counter.val()) === maxLength) {
+      $(".error-message")
+        .text("Please type something!")
+        .slideDown();
+    }
+    if (Number($Counter.val()) !== maxLength && $Counter.val() > 0) {
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: $Data,
+        success: function() {
+          loadTweets();
+        },
+        error: function(error) {
+          console.log("there was an error");
+          // console.log("there was an error");
+        },
+      });
 
-    $TextArea.val("");
-    $Counter.text("140");
+      $TextArea.val("");
+      $Counter.text(maxLength);
+    }
   });
   // =================================Ajax functions ==================
 

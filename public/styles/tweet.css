@@ -18,6 +18,12 @@ article header {
 .tweet-name {
   padding-left: 10px;
   flex-grow: 2;
+  font-weight: 600;
+}
+
+.handle {
+  font-style: italic;
+  color: gray;
 }
 
 article footer {

@@ -25,8 +25,12 @@ $(document).ready(function() {
 
     if (charLengthLeft < 0) {
       $(".counter").addClass("negetive-counter");
+      $(".error-message")
+        .text("Your tweet is too long!")
+        .slideDown();
     } else {
       $(".counter").removeClass("negetive-counter");
+      $(".error-message").slideUp();
     }
   });
 });
