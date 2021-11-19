@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots of the final project
 
-!["screenshot description"](./docs/mobileView.PNG)
+!["screenshot description"](https://github.com/Alchiman/tweeter/blob/master/docs/mobileView.png)
 
-!["screenshot description"](./docs/desktopView.PNG)
+!["screenshot description"](https://github.com/Alchiman/tweeter/blob/master/docs/desktopView.png)
 
 ## Dependencies
 
