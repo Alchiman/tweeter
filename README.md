@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots of the final project
 
-![Mobile Screen](/Users/Alireza/Documents/LHL/lighthouse/w4/tweeter/reletives/Screen Shot 2021-11-18 at 6.47.56 PM.png)
-![Desktop Screen](/Users/Alireza/Documents/LHL/lighthouse/w4/tweeter/reletives/Screen Shot 2021-11-18 at 6.51.32 PM.png)
+![Mobile Screen](./reletives/Screen Shot 2021-11-18 at 6.47.56 PM.png)
+![Desktop Screen](./reletives/Screen Shot 2021-11-18 at 6.51.32 PM.png)
 
 ## Dependencies
 
