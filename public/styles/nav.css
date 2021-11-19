@@ -26,4 +26,16 @@ nav {
 
 .nav-right-side i {
   color: #fa7319;
+  animation: MoveUpDown 1s linear infinite;
+  position: relative;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 8px;
+  }
 }
