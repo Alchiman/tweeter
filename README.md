@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots of the final project
 
-!["screenshot description"](./reletives/1.PNG)
+!["screenshot description"](./docs/mobileView.PNG)
 
-!["screenshot description"](./reletives/2.PNG)
+!["screenshot description"](./docs/desktopView.PNG)
 
 ## Dependencies
 
