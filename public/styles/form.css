@@ -4,14 +4,11 @@ main {
   width: 90%;
 }
 
-.new-tweet {
-  margin-bottom: 40px;
-}
-
 main form label {
   font-weight: 600;
   color: #868686;
 }
+
 form textarea {
   resize: none;
   outline: none;
@@ -23,6 +20,16 @@ form textarea {
   width: 100%;
   background-color: transparent;
 }
+
+main button {
+  background-color: #fa7319;
+  color: #ffffff;
+}
+
+.new-tweet {
+  margin-bottom: 40px;
+}
+
 .error-message {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -39,10 +46,6 @@ form textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-main button {
-  background-color: #fa7319;
-  color: #ffffff;
 }
 
 .negetive-counter {

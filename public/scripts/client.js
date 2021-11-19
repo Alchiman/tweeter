@@ -36,7 +36,7 @@ $(document).ready(function() {
     for (const tweet of tweets) {
       // here tweet taken from the array has turned into an article:
       const readyTweet = createTweetElement(tweet);
-      // this is tweet appender:
+      // here they get appended:
       $("#posted-tweets").prepend(readyTweet);
     }
   };
@@ -91,9 +91,4 @@ $(document).ready(function() {
       $Counter.text(maxLength);
     }
   });
-  // =================================Ajax functions ==================
-
-  // $("form").submit(function(event) {
-  //   console.log("submit prevented");
-  //   event.preventDefault();
 });

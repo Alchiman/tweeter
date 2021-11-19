@@ -1,3 +1,21 @@
+article footer {
+  padding-top: 10px;
+  border-top: solid 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+article i {
+  padding: 0 10px;
+}
+
+article i:hover {
+  color: orange;
+}
+
+article img {
+  width: 5rem;
+}
 article.tweet {
   padding: 20px;
   margin: 20px 0px;
@@ -24,23 +42,4 @@ article header {
 .handle {
   font-style: italic;
   color: gray;
-}
-
-article footer {
-  padding-top: 10px;
-  border-top: solid 1px;
-  display: flex;
-  justify-content: space-between;
-}
-
-article i {
-  padding: 0 10px;
-}
-
-article i:hover {
-  color: orange;
-}
-
-article img {
-  width: 5rem;
 }
