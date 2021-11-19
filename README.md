@@ -8,6 +8,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Mobile Screen"](./reletives/Screen Shot 2021-11-18 at 6.47.56 PM.png)
 !["Desktop Screen"](./reletives/Screen Shot 2021-11-18 at 6.51.32 PM.png)
+!["screenshot description"](./reletives/1.PNG)
+
+!["screenshot description"](./reletives/2.PNG)
 
 ## Dependencies
 
